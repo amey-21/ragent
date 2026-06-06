@@ -1,0 +1,27 @@
+# ── LLM & Orchestration ───────────────────────────────────
+groq
+langchain
+langchain-groq
+langchain-community
+langchain-huggingface
+langchain-text-splitters
+langgraph
+
+# ── Retrieval & Vector DB ─────────────────────────────────
+chromadb
+sentence-transformers
+rank-bm25
+
+# ── API ───────────────────────────────────────────────────
+fastapi
+uvicorn[standard]
+pydantic
+
+# ── Data ──────────────────────────────────────────────────
+datasets
+requests
+beautifulsoup4
+html2text
+
+# ── Utilities ─────────────────────────────────────────────
+python-dotenv

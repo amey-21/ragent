@@ -1,0 +1,51 @@
+# ── Environment ───────────────────────────────────────────
+.env
+.env.local
+.env.production
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ── Data & Models ─────────────────────────────────────────
+# Raw data and vector DB are too large for git
+data/chroma_db/
+data/escalations.json
+data/bm25_index.pkl
+
+# Keep data/raw/ structure but not the actual files
+# (user downloads their own via download_data.py)
+data/raw/*.txt
+
+# HuggingFace model cache
+.cache/
+*.bin
+*.safetensors
+
+# ── Evaluation outputs ────────────────────────────────────
+eval/results.csv
+eval/results.json
+
+# ── IDE & OS ──────────────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Testing ───────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# ── Logs ──────────────────────────────────────────────────
+*.log
+logs/

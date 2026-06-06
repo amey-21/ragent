@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Check imports resolve
+        run: |
+          python -c "
+          from src.ingestion.chunker import chunk_file, chunk_all_files
+          from src.retrieval.dense import dense_retrieve
+          from src.retrieval.sparse import sparse_retrieve
+          from src.retrieval.hybrid import hybrid_retrieve
+          from src.retrieval.reranker import rerank
+          from src.agent.tools import TOOLS
+          from src.agent.prompts import SYSTEM_PROMPT
+          from src.agent.memory import ShortTermMemory
+          print('All imports OK')
+          "
+
+      - name: Check chunker logic (no external deps needed)
+        run: |
+          python -c "
+          import tempfile, os
+          from src.ingestion.chunker import chunk_file
+
+          # Write a temp test file
+          content = '''TOPIC: Test Topic
+
+          Q: how do I test this?
+          A: You run the test script.
+
+          Q: what if it fails?
+          A: Check the error message.
+          '''
+          with tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False) as f:
+              f.write(content)
+              path = f.name
+
+          chunks = chunk_file(path, strategy='qa_aware')
+          assert len(chunks) == 2, f'Expected 2 chunks, got {len(chunks)}'
+          assert chunks[0].topic == 'Test Topic'
+          assert chunks[0].strategy == 'qa_aware'
+          os.unlink(path)
+          print(f'Chunker test passed — {len(chunks)} chunks')
+          "

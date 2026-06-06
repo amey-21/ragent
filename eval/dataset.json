@@ -1,0 +1,82 @@
+[
+  {
+    "question": "How do I request a refund?",
+    "ground_truth": "To request a refund, contact the customer support team with your purchase information. Refunds take several business days to process depending on the payment method."
+  },
+  {
+    "question": "Can I cancel my order after placing it?",
+    "ground_truth": "You can cancel an order by signing into your account, finding the order, and selecting the cancel option. Contact support if you face difficulties."
+  },
+  {
+    "question": "What payment methods are accepted?",
+    "ground_truth": "We accept major credit cards, debit cards, and PayPal as payment methods."
+  },
+  {
+    "question": "How do I track my order?",
+    "ground_truth": "You can track your order by logging into your account and checking the order status section."
+  },
+  {
+    "question": "What happens if I receive the wrong item?",
+    "ground_truth": "If you receive the wrong item, contact customer support with your order details and a photo of the incorrect item to get a replacement or refund."
+  },
+  {
+    "question": "How do I change my delivery address?",
+    "ground_truth": "To change a delivery address, contact customer support as soon as possible after placing the order, before it has been shipped."
+  },
+  {
+    "question": "How do I contact customer support?",
+    "ground_truth": "You can contact customer support via live chat, email, or phone during business hours."
+  },
+  {
+    "question": "What is the refund policy for damaged items?",
+    "ground_truth": "Damaged items are eligible for a refund. Contact support with your order number and a photo of the damage."
+  },
+  {
+    "question": "How do I create an account?",
+    "ground_truth": "To create an account, click Sign Up on the homepage and provide your email and a password."
+  },
+  {
+    "question": "How long does shipping take?",
+    "ground_truth": "Standard shipping takes 5-7 business days. Express shipping takes 2-3 business days."
+  },
+  {
+    "question": "I want to speak to a human agent",
+    "ground_truth": "You can request to speak to a human agent by contacting customer support via live chat or phone during business hours."
+  },
+  {
+    "question": "My payment failed but money was deducted",
+    "ground_truth": "If your payment failed but money was deducted, contact customer support with your order details and bank transaction reference. The amount is typically reversed within 5-7 business days."
+  },
+  {
+    "question": "How do I update my account email?",
+    "ground_truth": "To update your account email, go to account settings and update your profile information, or contact customer support for assistance."
+  },
+  {
+    "question": "Can I return a sale item?",
+    "ground_truth": "Sale items are typically final sale and cannot be returned unless they are damaged or defective."
+  },
+  {
+    "question": "How long does a refund take to process?",
+    "ground_truth": "Refunds typically take 5-7 business days to process once the request has been approved, depending on your payment method and bank."
+  },
+  {
+    "question": "What should I do if my order is delayed?",
+    "ground_truth": "If your order is delayed, check the tracking information first. If it shows no movement for 48 hours, contact customer support with your order number."
+  },
+  {
+    "question": "How do I apply a discount code?",
+    "ground_truth": "Enter your discount code at checkout in the promo code field. Only one code can be applied per order."
+  },
+  {
+    "question": "Can I change my order after placing it?",
+    "ground_truth": "Orders can be modified within a short window after placement. Contact customer support immediately with your order number to request changes."
+  },
+  {
+    "question": "What happens if I miss a delivery?",
+    "ground_truth": "If you miss a delivery, the carrier will typically leave a notice and attempt redelivery. You can also arrange collection from a local depot via the tracking link."
+  },
+  {
+    "question": "How do I delete my account?",
+    "ground_truth": "To delete your account, contact customer support with your account details and request account deletion."
+  }
+]
