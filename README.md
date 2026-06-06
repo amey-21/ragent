@@ -1,4 +1,4 @@
-# Support Agent - AI Customer Support with RAG
+# Ragent - AI Customer Support with RAG
 
 A production-grade AI customer support agent built with **LangGraph**, **hybrid RAG retrieval**, and **FastAPI**. Answers support questions from a knowledge base, checks order status, and escalates to humans when needed.
 
